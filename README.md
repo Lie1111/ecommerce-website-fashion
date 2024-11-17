@@ -1,4 +1,4 @@
-# A Complete PHP/MySQL based web application:
+
 
 http://localhost:3000/index.php -user
 http://localhost:3000/admin/login.php -admin
