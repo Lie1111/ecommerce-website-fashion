@@ -12,7 +12,7 @@ foreach ($result as $row) {
 <?php
 if( !isset($_GET['email']) || !isset($_GET['token']) )
 {
-    header('location: '.BASE_URL.'login.php');
+    header('location: '.'login.php');
     exit;
 }
 
@@ -22,7 +22,7 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 $tot = $statement->rowCount();
 if($tot == 0)
 {
-    header('location: '.BASE_URL.'login.php');
+    header('location: '.'login.php');
     exit;
 }
 foreach ($result as $row) {
@@ -59,7 +59,7 @@ if(isset($_POST['form1'])) {
         $statement = $pdo->prepare("UPDATE tbl_customer SET cust_password=?, cust_token=?, cust_timestamp=? WHERE cust_email=?");
         $statement->execute(array(md5($cust_new_password),'','',$_GET['email']));
         
-        header('location: '.BASE_URL.'reset-password-success.php');
+        header('location: '.'reset-password-success.php');
     }
 
     

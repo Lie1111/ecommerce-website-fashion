@@ -22,7 +22,7 @@ if ( (!isset($_REQUEST['email'])) || (isset($_REQUEST['token'])) )
         $statement = $pdo->prepare("UPDATE tbl_customer SET cust_token=?, cust_status=? WHERE cust_email=?");
         $statement->execute(array('',1,$_GET['email']));
 
-        $success_message = '<p style="color:green;">Your email is verified successfully. You can now login to our website.</p><p><a href="'.BASE_URL.'login.php" style="color:#167ac6;font-weight:bold;">Click here to login</a></p>';     
+        $success_message = '<p style="color:green;">Your email is verified successfully. You can now login to our website.</p><p><a href="'.'login.php" style="color:#167ac6;font-weight:bold;">Click here to login</a></p>';     
     }
 }
 ?>
