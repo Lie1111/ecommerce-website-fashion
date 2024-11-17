@@ -122,7 +122,7 @@ if(isset($_POST['form1'])) {
         						));
         } else {
 
-        	unlink('../assets/uploads/'.$_POST['current_photo']);
+        	//unlink('../assets/uploads/'.$_POST['current_photo']);
 
 			$final_name = 'product-featured-'.$_REQUEST['id'].'.'.$ext;
         	move_uploaded_file( $path_tmp, '../assets/uploads/'.$final_name );
@@ -359,13 +359,13 @@ foreach ($result as $row) {
 							</div>
 						</div>	
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Old Price<br><span style="font-size:10px;font-weight:normal;">(In USD)</span></label>
+							<label for="" class="col-sm-3 control-label">Old Price<br><span style="font-size:10px;font-weight:normal;">(In Ringgit)</span></label>
 							<div class="col-sm-4">
 								<input type="text" name="p_old_price" class="form-control" value="<?php echo $p_old_price; ?>">
 							</div>
 						</div>	
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Current Price <span>*</span><br><span style="font-size:10px;font-weight:normal;">(In USD)</span></label>
+							<label for="" class="col-sm-3 control-label">Current Price <span>*</span><br><span style="font-size:10px;font-weight:normal;">(In Ringgit)</span></label>
 							<div class="col-sm-4">
 								<input type="text" name="p_current_price" class="form-control" value="<?php echo $p_current_price; ?>">
 							</div>

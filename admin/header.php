@@ -49,7 +49,7 @@ if(!isset($_SESSION['user'])) {
 		<header class="main-header">
 
 			<a href="index.php" class="logo">
-				<span class="logo-lg">Fashionys.com</span>
+				<span class="logo-lg">Fashion.com</span>
 			</a>
 
 			<nav class="navbar navbar-static-top">
@@ -144,17 +144,17 @@ if(!isset($_SESSION['user'])) {
 			          </a>
 			        </li>
                     <!-- Icons to be displayed on Shop -->
-			        <li class="treeview <?php if( ($cur_page == 'service.php') ) {echo 'active';} ?>">
+			        <!-- <li class="treeview <?php if( ($cur_page == 'service.php') ) {echo 'active';} ?>">
 			          <a href="service.php">
 			            <i class="fa fa-hand-o-right"></i> <span>Service</span>
 			          </a>
-			        </li>
+			        </li> -->
 
-			      			        <li class="treeview <?php if( ($cur_page == 'faq.php') ) {echo 'active';} ?>">
+			      			        <!-- <li class="treeview <?php if( ($cur_page == 'faq.php') ) {echo 'active';} ?>">
 			          <a href="faq.php">
 			            <i class="fa fa-hand-o-right"></i> <span>FAQ</span>
 			          </a>
-			        </li>
+			        </li> -->
 
 						<li class="treeview <?php if( ($cur_page == 'customer.php') || ($cur_page == 'customer-add.php') || ($cur_page == 'customer-edit.php') ) {echo 'active';} ?>">
 			          <a href="customer.php">

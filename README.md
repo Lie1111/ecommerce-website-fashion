@@ -1,5 +1,8 @@
 # A Complete PHP/MySQL based web application:
 
+http://localhost:3000/index.php -user
+http://localhost:3000/admin/login.php -admin
+
 
 **Check Database Settings file for Username / password -- Admin User: admin / Password: 1234**
 

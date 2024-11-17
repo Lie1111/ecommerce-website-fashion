@@ -194,8 +194,7 @@ if(isset($_POST['form2'])) {
         </div>
       </div> 
 
-      <h4 style="background: #dd4b39;color:#fff;padding:10px 20px;">NB: If a country does not exist in the above list, the following "Rest of the World" shipping cost will be applied upon that.</h4>
-
+     
 </section>
 
 
@@ -207,14 +206,22 @@ if(isset($_POST['form2'])) {
 
 <section class="content">
 
-    <?php
-    $statement = $pdo->prepare("SELECT * FROM tbl_shipping_cost_all WHERE sca_id=1");
-    $statement->execute();
-    $result = $statement->fetchAll(PDO::FETCH_ASSOC);                            
+<?php
+// Initialize the amount variable to a default value (e.g., 0 or an empty string)
+$amount = '';
+
+$statement = $pdo->prepare("SELECT * FROM tbl_shipping_cost_all WHERE sca_id=1");
+$statement->execute();
+$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+// Check if the query returns any results
+if (count($result) > 0) {
     foreach ($result as $row) {
         $amount = $row['amount'];
     }
-    ?>
+}
+?>
+
 
     <div class="row">
         <div class="col-md-12">

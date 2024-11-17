@@ -232,7 +232,7 @@ foreach ($result as $row) {
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab_1" data-toggle="tab">About Us</a></li>
-                        <li><a href="#tab_2" data-toggle="tab">FAQ</a></li>
+                        <!-- <li><a href="#tab_2" data-toggle="tab">FAQ</a></li> -->
                         <li><a href="#tab_4" data-toggle="tab">Contact</a></li>
 
                     </ul>
@@ -299,7 +299,7 @@ foreach ($result as $row) {
 
         <!-- FAQ Page Content -->
 
-                        <div class="tab-pane" id="tab_2">
+                        <!-- <div class="tab-pane" id="tab_2">
                             <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
                             <div class="box box-info">
                                 <div class="box-body">
@@ -348,7 +348,7 @@ foreach ($result as $row) {
                                 </div>
                             </div>
                             </form>
-                        </div>
+                        </div> -->
 
                         <!-- End of FAQ Page Content -->
 

@@ -32,7 +32,7 @@ if (isset($_POST['form1'])) {
             $total = $statement->rowCount();                            
             if($total) {
                 $valid = 0;
-                $error_message .= LANG_VALUE_147."<br>";
+                $error_message .= LANG_VALUE_147."<br>";a
             }
         }
     }

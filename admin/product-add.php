@@ -103,51 +103,52 @@ if(isset($_POST['form1'])) {
 
 		//Saving data into the main table tbl_product
 		$statement = $pdo->prepare("INSERT INTO tbl_product(
-										p_name,
-										p_old_price,
-										p_current_price,
-										p_qty,
-										p_featured_photo,
-										p_description,
-										p_short_description,
-										p_feature,
-										p_condition,
-										p_return_policy,
-										p_total_view,
-										p_is_featured,
-										p_is_active,
-										ecat_id
-									) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-		$statement->execute(array(
-										$_POST['p_name'],
-										$_POST['p_old_price'],
-										$_POST['p_current_price'],
-										$_POST['p_qty'],
-										$final_name,
-										$_POST['p_description'],
-										$_POST['p_short_description'],
-										$_POST['p_feature'],
-										$_POST['p_condition'],
-										$_POST['p_return_policy'],
-										0,
-										$_POST['p_is_featured'],
-										$_POST['p_is_active'],
-										$_POST['ecat_id']
-									));
+			p_name,
+			p_old_price,
+			p_current_price,
+			p_qty,
+			p_featured_photo,
+			p_description,
+			p_short_description,
+			p_feature,
+			p_condition,
+			p_return_policy,
+			p_total_view,
+			p_is_featured,
+			p_is_active,
+			ecat_id
+					) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+			$statement->execute(array(
+						$_POST['p_name'],
+						$_POST['p_old_price'],
+						$_POST['p_current_price'],
+						$_POST['p_qty'],
+						$final_name,
+						$_POST['p_description'],
+						$_POST['p_short_description'],
+						$_POST['p_feature'],
+						$_POST['p_condition'],
+						$_POST['p_return_policy'],
+						0,  // p_total_view (seems to be a counter, setting it to 0)
+						$_POST['p_is_featured'],
+						$_POST['p_is_active'],
+						$_POST['ecat_id']
+					));
+
 
 		
 
         if(isset($_POST['size'])) {
 			foreach($_POST['size'] as $value) {
 				$statement = $pdo->prepare("INSERT INTO tbl_product_size (size_id,p_id) VALUES (?,?)");
-				$statement->execute(array($value,$ai_id));
+				
 			}
 		}
 
 		if(isset($_POST['color'])) {
 			foreach($_POST['color'] as $value) {
 				$statement = $pdo->prepare("INSERT INTO tbl_product_color (color_id,p_id) VALUES (?,?)");
-				$statement->execute(array($value,$ai_id));
+				
 			}
 		}
 	
@@ -232,13 +233,13 @@ if(isset($_POST['form1'])) {
 							</div>
 						</div>	
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Old Price <br><span style="font-size:10px;font-weight:normal;">(In USD)</span></label>
+							<label for="" class="col-sm-3 control-label">Old Price <br><span style="font-size:10px;font-weight:normal;">(In RM)</span></label>
 							<div class="col-sm-4">
 								<input type="text" name="p_old_price" class="form-control">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Current Price <span>*</span><br><span style="font-size:10px;font-weight:normal;">(In USD)</span></label>
+							<label for="" class="col-sm-3 control-label">Current Price <span>*</span><br><span style="font-size:10px;font-weight:normal;">(In RM)</span></label>
 							<div class="col-sm-4">
 								<input type="text" name="p_current_price" class="form-control">
 							</div>

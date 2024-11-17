@@ -898,7 +898,7 @@ foreach ($result as $row) {
                         <li><a href="#tab_6" data-toggle="tab">Home Settings</a></li>
                         <li><a href="#tab_7" data-toggle="tab">Banner Settings</a></li>
                         <li><a href="#tab_9" data-toggle="tab">Payment Settings</a></li>
-                        <li><a href="#tab_10" data-toggle="tab">Head & Body Scripts</a></li>
+                        <!-- <li><a href="#tab_10" data-toggle="tab">Head & Body Scripts</a></li> -->
                        <!--<li><a href="#tab_11" data-toggle="tab">Ads</a></li>-->
                     </ul>
                     <div class="tab-content">
@@ -1673,7 +1673,7 @@ foreach ($result as $row) {
                         </div>
 
 
-                        <div class="tab-pane" id="tab_10">
+                        <!-- <div class="tab-pane" id="tab_10">
                             <form class="form-horizontal" action="" method="post">
                                 <div class="box box-info">
                                     <div class="box-body">
@@ -1704,7 +1704,7 @@ foreach ($result as $row) {
                                     </div>
                                 </div>
                             </form>
-                        </div>
+                        </div> -->
 
 
 <!--

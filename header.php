@@ -226,10 +226,6 @@ foreach ($result as $row) {
 		<meta property="og:image" content="assets/uploads/<?php echo $og_photo; ?>">
 	<?php endif; ?>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-	<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5993ef01e2587a001253a261&product=inline-share-buttons"></script>
-
 <?php echo $before_head; ?>
 
 </head>
@@ -300,7 +296,7 @@ foreach ($result as $row) {
 					}
 					?>
 
-					<li><a href="cart.php"><i class="fa fa-shopping-cart"></i> <?php echo LANG_VALUE_19; ?> (<?php echo LANG_VALUE_1; ?><?php
+				<li><a href="cart.php"><i class="fa fa-shopping-cart"></i> <?php echo LANG_VALUE_19; ?> (RM<?php
 					if(isset($_SESSION['cart_p_id'])) {
 						$table_total_price = 0;
 						$i=0;
@@ -337,6 +333,7 @@ foreach ($result as $row) {
 		</div>
 	</div>
 </div>
+
 
 <div class="nav">
 	<div class="container">
@@ -399,9 +396,10 @@ foreach ($result as $row) {
 							?>
 
 							<li><a href="about.php"><?php echo $about_title; ?></a></li>
-							<li><a href="faq.php"><?php echo $faq_title; ?></a></li>
+							<!-- <li><a href="faq.php"><?php echo $faq_title; ?></a></li> -->
 
 							<li><a href="contact.php"><?php echo $contact_title; ?></a></li>
+							
 						</ul>
 					</div>
 				</div>
